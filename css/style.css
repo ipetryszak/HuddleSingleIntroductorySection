@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url('../images/bg-desktop.svg'), hsl(257, 40%, 49%);
+  background-size: cover;
+  box-sizing: border-box;
+  color: white;
+  font-size: 15.5px;
+}
+h1{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+}
+.wrapper {
+  display: grid;
+  margin: 3em auto;
+  max-width: 1200px;
+  grid-template-columns: 55% 45%;
+  grid-template-areas:
+  "h ."
+  "l r"
+  ". f"
+  "g g";
+}
+.header {
+  grid-area: h;
+}
+.logo {
+  height: 45px;
+  padding: 1em;
+  margin-bottom: 3em;
+}
+.content-col-left {
+  grid-area: l;
+  padding: 1em;
+  text-align: center;
+}
+.mockups {
+  width: 100%;
+}
+.content-col-right {
+  grid-area: r;
+  padding: 4em 4em;
+}
+.content-text {
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  color: hsl(257, 40%, 49%);
+  background: #fff;
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 2em;
+  margin-top: 1em;
+  box-shadow: 0 0.5em 2em rgba(73, 68, 75, 0.63);
+}
+.btn:hover {
+  background: rgba(199, 194, 194, 0.7);
+}
+.footer-icons {
+  grid-area: f;
+  text-align: right;
+}
+.footer-single-icon {
+  width: 25px;
+  padding: 0.5em;
+}
+.footer {
+  grid-area: g;
+  text-align: center;
+  color: black;
+  margin-top: 2em;
+  padding: 1em;
+}
+.footer a:link,
+.footer a:visited {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 1000px)
+{
+  body {
+      background: url('../images/bg-mobile.svg'), hsl(257, 40%, 49%);
+      font-size: 17px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  .wrapper
+  {
+    justify-content: center;
+    grid-template-columns: 80%;
+    grid-template-areas:
+    "h"
+    "l"
+    "r"
+    "f"
+    "g"
+  }
+  .mockups {
+    width: 70%;
+  }
+  .content-col-right {
+    grid-area: r;
+    padding: 3em 2em;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px)
+{
+  .wrapper {
+    grid-template-columns: 100%;
+  }
+  .mockups {
+    width: 90%;
+  }
+}
