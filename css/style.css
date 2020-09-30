@@ -60,7 +60,7 @@ h1{
   display: inline-block;
   padding: 10px 40px;
   border-radius: 2em;
-  margin-top: 1em;
+  margin-top: 2em;
   box-shadow: 0 0.5em 2em rgba(73, 68, 75, 0.63);
 }
 .btn:hover {
@@ -91,8 +91,11 @@ h1{
 @media screen and (max-width: 1000px)
 {
   body {
-      background: url('../images/bg-mobile.svg'), hsl(257, 40%, 49%);
       font-size: 17px;
+      background: url('../images/bg-mobile.svg'), hsl(257, 40%, 49%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center top;
   }
   h1 {
     font-size: 1.5em;
@@ -100,7 +103,7 @@ h1{
   .wrapper
   {
     justify-content: center;
-    grid-template-columns: 80%;
+    grid-template-columns: 90%;
     grid-template-areas:
     "h"
     "l"
@@ -109,11 +112,14 @@ h1{
     "g"
   }
   .mockups {
-    width: 70%;
+    width: 80%;
   }
   .content-col-right {
     grid-area: r;
     padding: 3em 2em;
+    text-align: center;
+  }
+  .footer-icons {
     text-align: center;
   }
 }
